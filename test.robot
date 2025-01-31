@@ -49,24 +49,24 @@ Passing Test 5
 # ? FAILING TEST CASES
 Failing Test 1
     [Tags]    low
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Page Should Contain    NonExistentText
     Close Browser
 
 Failing Test 2
     [Tags]    medium
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}      options=add_argument("--headless")
     Click Element    ${INVALID_XPATH}  # Element does not exist
     Close Browser
 
 Failing Test 3
     [Tags]    high
-    Open Browser    ${INVALID_URL}    ${BROWSER}  # Invalid URL
+    Open Browser    ${INVALID_URL}    ${BROWSER}      options=add_argument("--headless") # Invalid URL
     Close Browser
 
 Failing Test 4
     [Tags]    high
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Input Text    name=q    ${SEARCH_TERM}
     Press Keys    name=q    ENTER
     Title Should Be    Incorrect Title  # This will fail
@@ -74,6 +74,6 @@ Failing Test 4
 
 Failing Test 5
     [Tags]    low
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Wait Until Element Is Visible    ${INVALID_XPATH}    timeout=5  # Will fail
     Close Browser
