@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${CHROME_USER_DATA}    /user/local/bin/chromedriver
+# ${CHROME_USER_DATA}    /user/local/bin/chromedriver
 
 *** Test Cases ***
 Open Browser With Unique User Data
