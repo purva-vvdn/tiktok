@@ -15,13 +15,13 @@ ${INVALID_XPATH}  //div[@id="nonexistent"]
 # ? PASSED TEST CASES
 Passing Test 1
     [Tags]    low
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}    options=add_argument("--headless")
     Page Should Contain    Google
     Close Browser
 
 Passing Test 2
     [Tags]    medium
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Input Text    name=q    ${SEARCH_TERM}
     Press Keys    name=q    ENTER
     Wait Until Element Is Visible    ${VALID_XPATH}    timeout=5
@@ -29,20 +29,20 @@ Passing Test 2
 
 Passing Test 3
     [Tags]    low
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Title Should Be    Google
     Close Browser
 
 Passing Test 4
     [Tags]    low
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}     options=add_argument("--headless")
     Go To    ${URL}
     Location Should Be    ${URL}
     Close Browser
 
 Passing Test 5
     [Tags]    high
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}      options=add_argument("--headless")
     Wait Until Page Contains    Google    timeout=5
     Close Browser
 
