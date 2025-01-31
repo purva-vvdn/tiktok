@@ -1,12 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Variables ***
+# ${CHROME_USER_DATA}    /user/local/bin/chromedriver
+
 *** Test Cases ***
-Open Browser With Arguments
-    # Create ChromeOptions instance
-    ${options}=    Evaluate    sys.modules['selenium.webdriver.chrome.options'].Options()    sys
-    # Add arguments
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    # Open the browser with the options
-    Open Browser    https://www.google.com    chrome    options=${options}
+Open Browser With Unique User Data
+    Open Browser  https://www.google.com  browser=chrome  options=add_argument("--disable-dev-shm-usage")
+    # Add your other steps here
