@@ -1,0 +1,1388 @@
+[
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a valid username (e.g., testuser1)., Enter a valid email address (e.g., testuser1@example.com)., Enter a strong password ( meeting password policy requirements)., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 1,
+        "TestCaseName": "Valid User Creation"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a username that already exists in the system., Enter a valid email address., Enter a valid password., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 2,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a valid username., Enter an invalid email address (e.g., invalidemail)., Enter a valid password ., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Invalid Email Format"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a valid username., Enter a valid email address., Enter a weak password (not meeting password policy requirements)., Confirm the weak password., Click the 'Create Account' button.",
+        "TestCaseID": null,
+        "TestCaseName": "Weak Password"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a valid username., Enter a valid email address., Enter a valid password ., Enter a different password in the confirmation field., Click the 'Create Account' button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Password Mismatch"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Leave all fields empty., Click the 'Create Account' button.",
+        "TestCaseID": 6,
+        "TestCaseName": "Empty Fields"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a username containing SQL injection code (e.g., '; DROP TABLE Users; --)., Enter a valid email address., Enter a valid password., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 7,
+        "TestCaseName": "SQL Injection Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a username containing XSS code (e.g., <script>alert('XSS') </script>)., Enter a valid email address., Enter a valid password., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 8,
+        "TestCaseName": "Cross-Site Scripting (XSS) Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a username exceeding the maximum allowed length., Enter a valid email address., Enter a valid password., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 9,
+        "TestCaseName": "Very Long Username"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Navigate to user account creation page., Enter a username containing special characters (allowed and disallowed)., Enter a valid email address., Enter a valid password., Confirm the password., Click the 'Create Account' button.",
+        "TestCaseID": 10,
+        "TestCaseName": "Special Characters in Username"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Intentionally enter invalid data in various fields (e.g., wrong email format, weak password, etc.)., Observe the error messages displayed.",
+        "TestCaseID": 11,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Creation",
+        "TestSteps": "",
+        "TestCaseID": 12,
+        "TestCaseName": "Accessibility Check"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Create a new account., Check the inbox for a verification email.,  Click the verification link in the email.",
+        "TestCaseID": 13,
+        "TestCaseName": "Email Verification (if applicable)"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Create a new account., Use the 'Forgot Password' functionality to initiate a password reset., Follow the instructions to reset the password.",
+        "TestCaseID": 14,
+        "TestCaseName": "Password Reset Functionality (after account creation)"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Creation",
+        "TestSteps": "Create a new account and log in., Leave the browser open for an extended period (longer than the configured session timeout)., Attempt to access protected resources.",
+        "TestCaseID": 15,
+        "TestCaseName": "Session Management"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Audit Log Entry"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": " 1. User with insufficient privileges attempts an action that generates an audit log entry. ",
+        "TestCaseID": 2,
+        "TestCaseName": "Failed Audit Log Entry - Insufficient Privileges"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. User performs an action that generates a very large amount of data in the audit log (e.g., exporting a massive dataset).",
+        "TestCaseID": 3,
+        "TestCaseName": "Audit Log Entry - Large Data Entry"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. User enters data containing special characters (e.g., ',, <, >, &, etc.) when performing an action that generates a log entry.",
+        "TestCaseID": 4,
+        "TestCaseName": "Audit Log Entry - Special Characters"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Attempt to inject malicious SQL code into input fields that generate audit log entries.",
+        "TestCaseID": 5,
+        "TestCaseName": "SQL Injection Vulnerability"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Attempt to inject malicious JavaScript code into input fields that generate audit log entries. 2. View the audit log entries in a web interface.",
+        "TestCaseID": 6,
+        "TestCaseName": "Cross-Site Scripting (XSS) Vulnerability"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. User without appropriate permissions attempts to access or modify the audit logs.",
+        "TestCaseID": 7,
+        "TestCaseName": "Unauthorized Access to Audit Logs"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Perform multiple actions. 2. Verify that all log entries are complete, accurate, and in chronological order.",
+        "TestCaseID": null,
+        "TestCaseName": "Audit Log Data Integrity"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Perform various actions. 2. Search the audit logs using different search criteria (user, action, timestamp).",
+        "TestCaseID": 9,
+        "TestCaseName": "Audit Log Search Functionality"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Export the audit logs to a common format (e.g., CSV, XML). 2. Verify the integrity and completeness of the exported data.",
+        "TestCaseID": 10,
+        "TestCaseName": "Audit Log Export Functionality"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Simulate log file reaching maximum size or age defined in retention policy. 2. Verify that logs are rotated/archived according to policy.",
+        "TestCaseID": 11,
+        "TestCaseName": "Audit Log Rotation and Retention Policy"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Simulate a system crash while an action that triggers a log entry is in progress.",
+        "TestCaseID": 12,
+        "TestCaseName": "System Crash during Log Entry"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Access the audit log interface. 2. Verify that all relevant information (user, action, timestamp, etc.) is displayed clearly and concisely.",
+        "TestCaseID": 13,
+        "TestCaseName": "Audit Log UI - Clear and Concise Information"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Access the audit log interface using assistive technologies (screen readers, keyboard navigation).",
+        "TestCaseID": 14,
+        "TestCaseName": "Audit Log UI - Accessibility"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "",
+        "TestCaseID": 15,
+        "TestCaseName": "Denial of Service (DoS) Attack on Audit Logging"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Audit Logging",
+        "TestSteps": "1. Perform actions involving sensitive data (e.g., credit card numbers, passwords). 2. Check if the sensitive data is masked or redacted in the audit logs according to defined policies.",
+        "TestCaseID": 16,
+        "TestCaseName": "Data Masking in Audit Logs"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Enter valid tenant data (name, address, contact information, etc.)., Click the 'Create Tenant' button.",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Tenant Creation"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Leave required fields (e.g., tenant name) blank., Click the 'Create Tenant' button.",
+        "TestCaseID": 2,
+        "TestCaseName": "Tenant Creation with Missing Data"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Enter invalid data in a field (e.g., non-numeric characters in a phone number field)., Click the 'Create Tenant' button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Tenant Creation with Invalid Data"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface ., Select an existing tenant., Modify the tenant data with valid values., Click the 'Update Tenant' button.",
+        "TestCaseID": 4,
+        "TestCaseName": "Tenant Update with Valid Data"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Select an existing tenant., Modify the tenant data with invalid values., Click the 'Update Tenant' button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Tenant Update with Invalid Data"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Select an existing tenant., Click the 'Delete Tenant' button., Confirm the deletion.",
+        "TestCaseID": 6,
+        "TestCaseName": "Tenant Deletion"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Attempt to delete a non-existent tenant.",
+        "TestCaseID": 7,
+        "TestCaseName": "Attempt to Delete Non-Existent Tenant"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Attempt to inject malicious SQL code into input fields.",
+        "TestCaseID": 8,
+        "TestCaseName": "SQL Injection Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Attempt to inject malicious JavaScript code into input fields.",
+        "TestCaseID": 9,
+        "TestCaseName": "Cross-Site Scripting (XSS) Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Attempt to access the tenant management interface without proper authentication.",
+        "TestCaseID": 10,
+        "TestCaseName": "Unauthorized Access Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Enter extremely long strings into text fields (e.g., address field).",
+        "TestCaseID": 11,
+        "TestCaseName": "Large Data Input"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "Access the tenant management interface., Enter various special characters (e.g., accented characters, symbols) into text fields.",
+        "TestCaseID": null,
+        "TestCaseName": "Special Characters Input"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Tenant Management Integration",
+        "TestSteps": "",
+        "TestCaseID": 13,
+        "TestCaseName": "User-Friendly Error Messages"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Login"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Enter valid username and incorrect password., 3. Click the login button.",
+        "TestCaseID": 2,
+        "TestCaseName": "Unsuccessful Login - Incorrect Password"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Enter an invalid username and valid password., 3. Click the login button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Unsuccessful Login - Invalid Username"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Leave username and password fields empty., 3. Click the login button.",
+        "TestCaseID": 4,
+        "TestCaseName": "Login - Empty Fields"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Enter a username containing SQL injection code (e.g., ' OR '1'='1)., 3. Enter a password., 4. Click the login button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Login - SQL Injection Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Enter a username containing cross-site scripting code (e.g., <script>alert(' XSS')</script>)., 3. Enter a password., 4. Click the login button.",
+        "TestCaseID": 6,
+        "TestCaseName": "Login - XSS Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the registration page., 2. Attempt to register with a weak password., 3. Attempt to register with a strong password.",
+        "TestCaseID": 7,
+        "TestCaseName": "Password Strength Check"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Click on 'Forgot Password'., 3. Enter a valid registered email address., 4. Follow the password reset instructions.",
+        "TestCaseID": 8,
+        "TestCaseName": "Forgot Password Functionality"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to the login page., 2. Click on 'Forgot Password'., 3. Enter an invalid email address., 4. Submit the request.",
+        "TestCaseID": 9,
+        "TestCaseName": "Forgot Password - Invalid Email"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to various pages., 2. Click on all buttons present on each page.",
+        "TestCaseID": 10,
+        "TestCaseName": "Button Responsiveness"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "UI/UX",
+        "TestSteps": " 1. Navigate to the main menu., 2. Click on each menu item., 3. Verify correct page redirection.",
+        "TestCaseID": 11,
+        "TestCaseName": "Navigation - Menu Functionality"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Access any form with required fields., 2. Attempt to submit the form without filling in required fields.",
+        "TestCaseID": 12,
+        "TestCaseName": "Form Validation - Required Fields"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Access any form with specific data type fields (e.g., number, email)., 2. Enter invalid data types into the fields.",
+        "TestCaseID": 13,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to a page with file upload functionality., 2. Attempt to upload a file exceeding the maximum allowed size.",
+        "TestCaseID": 14,
+        "TestCaseName": "File Upload - Large File"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Navigate to a page with file upload functionality., 2 . Attempt to upload a file with an unsupported file type.",
+        "TestCaseID": 15,
+        "TestCaseName": "File Upload - Invalid File Type"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "UI/UX",
+        "TestSteps": "1. Access various pages of the application., 2. Measure the time taken for each page to load completely.",
+        "TestCaseID": 16,
+        "TestCaseName": "User Experience - Page Load Time"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter a valid username in the filter field. 2. Click the filter button.",
+        "TestCaseID": 1,
+        "TestCaseName": "Filter by Username - Positive"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter an invalid username (non-existent) in the filter field. 2. Click the filter button.",
+        "TestCaseID": null,
+        "TestCaseName": "Filter by Username - Negative"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter a valid email address in the filter field. 2. Click the filter button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Filter by Email - Positive"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter an invalid email address (incorrect format) in the filter field. 2. Click the filter button.",
+        "TestCaseID": 4,
+        "TestCaseName": "Filter by Email - Negative"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select a valid role from the dropdown menu. 2. Click the filter button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Filter by Role - Positive"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'None' or leave the role dropdown unselected. 2. Click the filter button.",
+        "TestCaseID": 6,
+        "TestCaseName": "Filter by Role - Negative"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter a valid username. 2. Select a valid role. 3. Click the filter button.",
+        "TestCaseID": 7,
+        "TestCaseName": "Filter by Multiple Criteria - Positive"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": " 1. Enter an invalid username. 2. Select a role. 3. Click the filter button.",
+        "TestCaseID": 8,
+        "TestCaseName": "Filter by Multiple Criteria - Negative"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Username' and 'Ascending' from the sort options. 2. Click the sort button.",
+        "TestCaseID": 9,
+        "TestCaseName": "Sort by Username - Ascending"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Username' and 'Descending' from the sort options. 2. Click the sort button.",
+        "TestCaseID": 10,
+        "TestCaseName": "Sort by Username - Descending"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Email' and 'Ascending' from the sort options. 2. Click the sort button.",
+        "TestCaseID": 11,
+        "TestCaseName": "Sort by Email - Ascending"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Email' and 'Descending' from the sort options. 2. Click the sort button.",
+        "TestCaseID": 12,
+        "TestCaseName": "Sort by Email - Descending"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Role' and 'Ascending' from the sort options. 2. Click the sort button .",
+        "TestCaseID": 13,
+        "TestCaseName": "Sort by Role - Ascending"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Select 'Role' and 'Descending' from the sort options. 2. Click the sort button.",
+        "TestCaseID": 14,
+        "TestCaseName": "Sort by Role - Descending "
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Ensure there are no users in the system. 2. Attempt to filter and sort.",
+        "TestCaseID": 15,
+        "TestCaseName": "Edge Case: Empty User List"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Create a very large number of users (e.g., 1000+). 2. Attempt to filter and sort. ",
+        "TestCaseID": 16,
+        "TestCaseName": "Edge Case: Very Large User List"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "",
+        "TestCaseID": 17,
+        "TestCaseName": "Security: SQL Injection (Filter)"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "",
+        "TestCaseID": 18,
+        "TestCaseName": "Security: XSS (Filter)"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Enter invalid data in the filter fields (various cases). 2. Observe the displayed messages.",
+        "TestCaseID": 19,
+        "TestCaseName": "User Experience: Clear Error Messages"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Access the filtering and sorting functionality on different devices (desktop, tablet, mobile).",
+        "TestCaseID": 20,
+        "TestCaseName": "User Experience: Responsive Design"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Attempt to filter and sort users without prior training or instructions.",
+        "TestCaseID": 21,
+        "TestCaseName": "User Experience: Intuitive Interface"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Filtering and Sorting Users",
+        "TestSteps": "1. Perform filtering and sorting actions. 2. Observe the visual feedback from the system.",
+        "TestCaseID": 22,
+        "TestCaseName": "User Experience: Clear Feedback"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Select a user from the user list., Select a role from the role list., Click the 'Assign' button.",
+        "TestCaseID": 1,
+        "TestCaseName": "Positive: Assign Role to User"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page.,  Select a non-existent user ID., Select a role from the role list., Click the 'Assign' button.",
+        "TestCaseID": 2,
+        "TestCaseName": "Negative: Assign Role to Non-Existent User"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Select a valid user., Select a non-existent role ID., Click the 'Assign' button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Negative: Assign Non-Existent Role to User"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page.,  Select a user with an existing role., Select a different role., Click the 'Assign' button.",
+        "TestCaseID": 4,
+        "TestCaseName": "Edge: Assign Role to User with Existing Role"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Select a user., Select multiple roles from the role list (if allowed)., Click the 'Assign' button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Edge: Assign Multiple Roles to a User"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator.,  Navigate to the role assignment page., Attempt to inject SQL code into the user or role selection fields (e.g., 'admin' OR '1'='1')., Click the 'Assign' button.",
+        "TestCaseID": 6,
+        "TestCaseName": "Security: SQL Injection Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Enter malicious JavaScript code into the user or role selection fields., Click the 'Assign' button.",
+        "TestCaseID": 7,
+        "TestCaseName": "Security: Cross-Site Scripting (XSS) Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Assess the clarity and ease of use of the interface.",
+        "TestCaseID": 8,
+        "TestCaseName": "User Experience: Clear and Concise Interface"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Role Assignment",
+        "TestSteps": "Login as an administrator., Navigate to the role assignment page., Intentionally introduce errors (e.g., incorrect input)., Observe the error messages.",
+        "TestCaseID": 9,
+        "TestCaseName": "User Experience: Error Handling"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Navigate to account settings., Locate and select the 'Delete Account' option., Confirm account deletion.",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Account Deletion"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Navigate to account settings., Locate and select the 'Delete Account' option., Enter incorrect password during confirmation.",
+        "TestCaseID": 2,
+        "TestCaseName": "Account Deletion with Incorrect Password"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials ., Wait for session to timeout., Attempt to delete account.",
+        "TestCaseID": 3,
+        "TestCaseName": "Account Deletion with Session Timeout"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Navigate to account settings., Locate and select the 'Delete Account' option., Enter invalid characters in confirmation fields (if any).",
+        "TestCaseID": 4,
+        "TestCaseName": "Account Deletion with Invalid Input"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Navigate to account settings., Locate and select the 'Delete Account' option., Attempt to inject SQL code into input fields (e.g., password confirmation).",
+        "TestCaseID": 5,
+        "TestCaseName": "SQL Injection Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Navigate to account settings., Locate and select the 'Delete Account' option., Enter a script in input fields (e.g., password confirmation).",
+        "TestCaseID": 6,
+        "TestCaseName": "Cross-Site Script ing (XSS) Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Navigate to account settings., Locate and select the 'Delete Account' option., Observe the confirmation message and options.",
+        "TestCaseID": 7,
+        "TestCaseName": "Account Deletion Confirmation UX"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials., Delete account., Attempt to access previously accessible data (e.g., via API).",
+        "TestCaseID": 8,
+        "TestCaseName": "Data Persistence After Deletion"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "User Account Deletion",
+        "TestSteps": "Login with valid credentials. Account has associated data (e.g., posts, files)., Delete account.",
+        "TestCaseID": 9,
+        "TestCaseName": "Account Deletion with Associated Data"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Deploy a new application using the application tier management system., Verify the application is accessible and functioning correctly.",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Application Deployment"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to deploy an application requiring more resources than available., Observe the system's response.",
+        "TestCaseID": 2,
+        "TestCaseName": "Failed Application Deployment - Insufficient Resources"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Scale up the number of application instances., Monitor application performance and resource utilization.",
+        "TestCaseID": 3,
+        "TestCaseName": "Application Scaling - Increase Instances"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Scale down the number of application instances., Monitor application performance and resource utilization.",
+        "TestCaseID": 4,
+        "TestCaseName": "Application Scaling - Decrease Instances"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Deploy a new version of an application., Verify the updated application is functioning correctly.",
+        "TestCaseID": 5,
+        "TestCaseName": "Application Update - Successful Rollout"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Deploy a faulty application update., Initiate a rollback to the previous version.",
+        "TestCaseID": 6,
+        "TestCaseName": "Application Update - Rollback"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Delete an application., Verify the application is no longer accessible.",
+        "TestCaseID": 7,
+        "TestCaseName": "Application Deletion"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to access application management functions without proper authorization.,  Observe system's response.",
+        "TestCaseID": 8,
+        "TestCaseName": "Unauthorized Access Attempt"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to inject malicious SQL code into application input fields., Monitor system's response and database activity.",
+        "TestCaseID": 9,
+        "TestCaseName": "SQL Injection Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to inject malicious scripts into application input fields., Observe system's response and browser behavior.",
+        "TestCaseID": 10,
+        "TestCaseName": "Cross-Site Scripting (XSS) Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to deploy an exceptionally large application., Monitor deployment time and resource consumption.",
+        "TestCaseID": 11,
+        "TestCaseName": "Application Deployment - Edge Case: Very Large Application"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Attempt to deploy an application with a deliberately malformed configuration file., Observe the system's error handling.",
+        "TestCaseID": 12,
+        "TestCaseName": "Application Deployment - Edge Case: Invalid Configuration File"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Have a representative user navigate the application tier management interface., Observe user behavior and obtain feedback.",
+        "TestCaseID": 13,
+        "TestCaseName": "User Experience - Intuitive Interface"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Access help and documentation within the application tier management system., Assess the completeness and clarity of the information provided.",
+        "TestCaseID": 14,
+        "TestCaseName": "User Experience - Comprehensive Help and Documentation"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Application Tier Management",
+        "TestSteps": "Deliberately introduce errors during various operations (e.g., invalid input)., Observe the clarity and helpfulness of the error messages provided to the user.",
+        "TestCaseID": 15,
+        "TestCaseName": "User Experience - Error Handling and Feedback"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Navigate to the user list page. 2. Observe the displayed users.",
+        "TestCaseID": 1,
+        "TestCaseName": "Positive: First Page Load"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Navigate to the user list page. 2. Click the 'Next' pagination button.",
+        "TestCaseID": 2,
+        "TestCaseName": "Positive: Navigate to Next Page"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Navigate to the user list page. 2. Click 'Next' then click 'Previous'.",
+        "TestCaseID": 3,
+        "TestCaseName": "Positive: Navigate to Previous Page"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "",
+        "TestCaseID": 4,
+        "TestCaseName": "Positive: Navigate to Specific Page"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Navigate to the user list page. 2. Manually enter a page number that exceeds the total number of pages in the input field if available.",
+        "TestCaseID": 5,
+        "TestCaseName": "Negative: Page Number Out of Range"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Navigate to the user list page. 2. Enter non-numeric characters into the page number input field if available.",
+        "TestCaseID": 6,
+        "TestCaseName": "Negative: Invalid Page Number"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": " 1. Navigate to user list page. 2. Enter '0' or a negative number into the page input field if available.",
+        "TestCaseID": 7,
+        "TestCaseName": "Negative: Attempt to Navigate to a Non-Existent Page"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Simulate a scenario with zero users. 2. Navigate to the user list page.",
+        "TestCaseID": 8,
+        "TestCaseName": "Edge Case: Zero Users"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Simulate a scenario with fewer users than the page size. 2. Navigate to the user list page.",
+        "TestCaseID": 9,
+        "TestCaseName": "Edge Case: Only One Page of Users"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Attempt to inject malicious SQL code into the pagination input field (if user input is allowed).",
+        "TestCaseID": 10,
+        "TestCaseName": "Security: SQL Injection (if applicable)"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Attempt to inject malicious JavaScript code into the pagination input field (if user input is allowed).",
+        "TestCaseID": 11,
+        "TestCaseName": "Security: Cross-Site Scripting (XSS) (if applicable)"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": " 1. Navigate to the user list page. 2. Verify the clarity and usability of the pagination controls.",
+        "TestCaseID": 12,
+        "TestCaseName": "User Experience: Clear Pagination Display"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Pagination of User Lists",
+        "TestSteps": "1. Access the user list page on different screen sizes (desktop, tablet, mobile).",
+        "TestCaseID": 13,
+        "TestCaseName": "User Experience: Responsive Design"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Click the link in the email., Enter a new password that meets complexity requirements., Confirm the new password., Click 'Reset Password'.",
+        "TestCaseID": 1,
+        "TestCaseName": "Valid Password Reset"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an invalid email address (e.g., missing @ symbol)., Click 'Submit'.",
+        "TestCaseID": 2,
+        "TestCaseName": "Invalid Email Address"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an email address not registered with the system., Click 'Submit'.",
+        "TestCaseID": 3,
+        "TestCaseName": "Unregistered Email Address"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Click the link in the email., Enter a weak password (e.g., 'password')., Confirm the weak password., Click 'Reset Password'.",
+        "TestCaseID": 4,
+        "TestCaseName": "Weak Password"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Click the link in the email., Enter a new password., Confirm the new password with a different value., Click 'Reset Password'.",
+        "TestCaseID": 5,
+        "TestCaseName": "Password Mismatch"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Wait longer than the allowed time for the link to expire., Click the expired link in the email.",
+        "TestCaseID": 6,
+        "TestCaseName": "Expired Reset Link"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Modify the link in the email before clicking it (e.g., change part of the token).",
+        "TestCaseID": 7,
+        "TestCaseName": "Reset Link Tampering"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an email address containing malicious script (e.g., `<script>alert('XSS')</ script>@example.com`)., Click 'Submit'.",
+        "TestCaseID": 8,
+        "TestCaseName": "Email Injection Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Attempt to inject SQL code into the email address field to manipulate the database query.",
+        "TestCaseID": 9,
+        "TestCaseName": "SQL Injection Vulnerability"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Attempt multiple password reset requests with invalid or random email addresses.",
+        "TestCaseID": 10,
+        "TestCaseName": "Brute Force Attack"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Perform various negative test cases (e.g., invalid email, weak password)., Observe the error messages displayed.",
+        "TestCaseID": 11,
+        "TestCaseName": "User-Friendly Error Messages"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Observe the displayed password complexity requirements (if any).",
+        "TestCaseID": 12,
+        "TestCaseName": "Password Complexity Requirements Display"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an extremely long email address (exceeding maximum allowed length)., Click 'Submit'.",
+        "TestCaseID": 13,
+        "TestCaseName": "Long Email Address"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an email address containing various special characters (e.g., !@#$%^&*)., Click 'Submit'.",
+        "TestCaseID": 14,
+        "TestCaseName": "Special Characters in Email "
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter an email address with spaces., Click 'Submit'.",
+        "TestCaseID": 15,
+        "TestCaseName": "Email Address with Spaces"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Click the link in the email., Enter a very long password (exceeding maximum allowed length)., Confirm the password., Click 'Reset Password'.",
+        "TestCaseID": 16,
+        "TestCaseName": "Very Long Password"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Password Reset",
+        "TestSteps": "Navigate to password reset page., Enter a valid registered email address., Click 'Submit'., Check inbox for password reset email., Click the link in the email.,  Enter a password consisting only of numbers., Confirm the password., Click 'Reset Password'.",
+        "TestCaseID": 17,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit valid input data. 2. Observe the system's response.",
+        "TestCaseID": 1,
+        "TestCaseName": "Positive: Successful Data Processing"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data with an incorrect data type (e.g., string instead of integer). 2. Observe the system's response.",
+        "TestCaseID": 2,
+        "TestCaseName": "Negative: Invalid Data Type"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data with a required field missing. 2. Observe the system's response.",
+        "TestCaseID": 3,
+        "TestCaseName": "Negative: Missing Required Field"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data with a value outside the acceptable range. 2. Observe the system's response.",
+        "TestCaseID": 4,
+        "TestCaseName": "Negative: Data Out of Range"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data with the maximum allowed length. 2. Observe the system's response.",
+        "TestCaseID": null,
+        "TestCaseName": "Edge Case: Maximum Input Length"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data with the minimum allowed length. 2 . Observe the system's response.",
+        "TestCaseID": 6,
+        "TestCaseName": "Edge Case: Minimum Input Length"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit empty input data. 2. Observe the system's response.",
+        "TestCaseID": 7,
+        "TestCaseName": "Edge Case: Empty Input "
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data containing SQL injection code. 2. Monitor system logs for any suspicious activity.",
+        "TestCaseID": 8,
+        "TestCaseName": "Security: SQL Injection Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Submit input data containing XSS code. 2. Observe the system's response; check for any reflected or stored XSS vulnerabilities.",
+        "TestCaseID": 9,
+        "TestCaseName": "Security: Cross-Site Scripting (XSS) Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Introduce various errors (invalid data, missing fields, etc.). 2. Observe the clarity and helpfulness of error messages.",
+        "TestCaseID": 10,
+        "TestCaseName": "User Experience: Clear Error Messages"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Error Handling",
+        "TestSteps": "1. Attempt to submit invalid data. 2. Observe whether input validation provides real-time feedback to the user (e.g., highlighting incorrect fields ).",
+        "TestCaseID": 11,
+        "TestCaseName": "User Experience: User-Friendly Input Validation"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter a valid , new name in the name field., Click the 'Save' button.",
+        "TestCaseID": 1,
+        "TestCaseName": "Valid User Update - Name Change"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter a valid, new email address in the email field., Click the 'Save' button.",
+        "TestCaseID": 2,
+        "TestCaseName": "Valid User Update - Email Change"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter the current password., Enter a new password that meets complexity requirements., Re-enter the new password., Click the 'Save' button.",
+        "TestCaseID": 3,
+        "TestCaseName": "Valid User Update - Password Change"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Leave the name field empty., Click the 'Save' button.",
+        "TestCaseID": 4,
+        "TestCaseName": "Invalid User Update - Empty Name Field"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter an invalid email address (e.g., 'invalid email')., Click the 'Save' button.",
+        "TestCaseID": 5,
+        "TestCaseName": "Invalid User Update - Invalid Email Format"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter current password., Enter a weak password (e.g., 'password')., Re-enter the weak password., Click the 'Save' button.",
+        "TestCaseID": 6,
+        "TestCaseName": "Invalid User Update - Weak Password"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter a name exceeding the maximum allowed length., Click the 'Save' button.",
+        "TestCaseID": 7,
+        "TestCaseName": "Edge Case - Extremely Long Name"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter a name containing special characters (e.g., !@#$%^&*()_+=-`~[]\\{}|;':,./<>?)., Click the 'Save' button.",
+        "TestCaseID": 8,
+        "TestCaseName": "Edge Case - Special Characters in Name"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter malicious SQL code in the name field (e.g., 'OR 1=1--')., Click the 'Save' button.",
+        "TestCaseID": 9,
+        "TestCaseName": "Security - SQL Injection Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Enter malicious JavaScript code in the name field (e.g., '<script>alert('XSS ')</script>')., Click the 'Save' button.",
+        "TestCaseID": 10,
+        "TestCaseName": "Security - Cross-Site Scripting (XSS) Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Attempt to access the User Account Editing page using another user's session ID.",
+        "TestCaseID": 11,
+        "TestCaseName": "Security - Session Hijacking Attempt"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Intentionally enter invalid data in various fields., Click the 'Save' button.",
+        "TestCaseID": 12,
+        "TestCaseName": "User Experience - Clear and Concise Error Messages"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "User Account Editing",
+        "TestSteps": "Log in as a valid user., Navigate to User Account Editing page., Observe the layout and ease of use of the page.",
+        "TestCaseID": 13,
+        "TestCaseName": "User Experience - Intuitive Navigation"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Navigate to email notification settings. 2. Subscribe to daily digest emails. 3. Verify subscription status.",
+        "TestCaseID": 1,
+        "TestCaseName": "Positive: Email Notification Subscription"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Navigate to email notification settings. 2. Unsubscribe from daily digest emails. 3. Verify unsubscription status.",
+        "TestCaseID": 2,
+        "TestCaseName": "Positive: Email Notification Unsubscription"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Subscribe to notifications. 2. Trigger a notification event. 3. Verify email content (sender, subject , body).",
+        "TestCaseID": 3,
+        "TestCaseName": "Positive: Email Content Verification"
+    },
+    {
+        "PassFail": null,
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Attempt to subscribe with an invalid email address (e.g., missing @ symbol). 2. Observe system response.",
+        "TestCaseID": 4,
+        "TestCaseName": "Negative : Invalid Email Address"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Attempt to subscribe to more notification types than allowed. 2. Observe system response.",
+        "TestCaseID": 5,
+        "TestCaseName": "Negative: Subscription Limit Exceeded"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1 . Attempt to unsubscribe when not subscribed. 2. Observe system response.",
+        "TestCaseID": 6,
+        "TestCaseName": "Negative: Unsubscribe Failure"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Subscribe using an email address with special characters (e.g., test+123@example.com). 2. Verify email reception.",
+        "TestCaseID": 7,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Subscribe using an extremely long email address (within allowed limits). 2. Verify email reception.",
+        "TestCaseID": 8,
+        "TestCaseName": "Edge Case: Long Email Address"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Subscribe using an email address with multiple '+' signs. 2. Verify email reception.",
+        "TestCaseID": 9,
+        "TestCaseName": " Edge Case: Email with Multiple Plus Signs"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Attempt to inject malicious JavaScript code into email subscription fields . 2. Observe system response.",
+        "TestCaseID": 10,
+        "TestCaseName": "Security: Cross-Site Scripting (XSS) Prevention"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Attempt to inject SQL code into email subscription fields. 2. Observe system response.",
+        "TestCaseID": 11,
+        "TestCaseName": "Security : SQL Injection Prevention"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Evaluate the clarity and conciseness of instructions for managing email notifications.",
+        "TestCaseID": 12,
+        "TestCaseName": "UX: Clear and Concise Instructions"
+    },
+    {
+        "PassFail": "",
+        "Functionality": "Email Notifications",
+        "TestSteps": "1. Evaluate the ease of use and intuitiveness of the email notification settings interface.",
+        "TestCaseID": 13,
+        "TestCaseName": "UX: User-Friendly Interface"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Log in with valid credentials., Attempt to enter incorrect password three times consecutively.",
+        "TestCaseID": 1,
+        "TestCaseName": "Successful Account Lock"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Account is locked., Click on 'Unlock Account' link /button., Enter valid username., Answer security questions correctly OR provide a valid unlock code., Submit.",
+        "TestCaseID": 2,
+        "TestCaseName": "Successful Account Unlock"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Attempt to lock an account using incorrect username/password.",
+        "TestCaseID": 3,
+        "TestCaseName": "Account Lock - Invalid Credentials"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Account is locked., Click on 'Unlock Account' link/button., Enter valid username., Enter incorrect answers to security questions.",
+        "TestCaseID": null,
+        "TestCaseName": "Account Unlock - Incorrect Security Answers"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Account is locked., Click on 'Unlock Account' link/button., Enter valid username., Enter an invalid unlock code.",
+        "TestCaseID": 5,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": null,
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Attempt to log in with incorrect password multiple times from different IP addresses.",
+        "TestCaseID": 6,
+        "TestCaseName": "Account Lock - Multiple Failed Attempts from Different IPs"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Simulate a brute force attack by attempting login with many different passwords.",
+        "TestCaseID": 7,
+        "TestCaseName": "Account Lock - Brute Force Attack"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Attempt to inject malicious SQL code during the account unlock process (e.g., in the username or security answer fields).",
+        "TestCaseID": 8,
+        "TestCaseName": "SQL Injection Vulnerability during Unlock"
+    },
+    {
+        "PassFail": null,
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": " Attempt to inject malicious JavaScript code into the username or security answer fields during the unlock process.",
+        "TestCaseID": 9,
+        "TestCaseName": "Cross-Site Scripting (XSS) Vulnerability during Unlock"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Lock account, then attempt to access sensitive data via an existing session.",
+        "TestCaseID": 10,
+        "TestCaseName": "Session Management during Lock/Unlock"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Lock account., Initiate account unlock process., Verify that an email notification is sent to the registered email address.",
+        "TestCaseID": 11,
+        "TestCaseName": null
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Lock the account., Observe the message displayed to the user.",
+        "TestCaseID": 12,
+        "TestCaseName": "Account Locked - User Experience - Clear Messaging"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Follow the account unlock process., Evaluate the clarity and ease of following instructions.",
+        "TestCaseID": 13,
+        "TestCaseName": "Account Unlock - User Experience - Easy to Follow Instructions"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Attempt many incorrect passwords within a short time frame (e.g., 10 attempts in 1 minute).",
+        "TestCaseID": 14,
+        "TestCaseName": "Account Lock - Edge Case: Many Failed Attempts within a Short Time"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Lock the account., Immediately unlock the account.",
+        "TestCaseID": 15,
+        "TestCaseName": "Account Lock - Edge Case: Account Locked, then Immediately Unlocked"
+    },
+    {
+        "PassFail": "",
+        "Functionality": " Account Locking/Unlocking",
+        "TestSteps": "Attempt to unlock the account multiple times with correct credentials after it has been locked.",
+        "TestCaseID": 16,
+        "TestCaseName": "Account Unlock - Edge Case: Multiple Unlock Attempts"
+    }
+]
